@@ -76,6 +76,7 @@ header {
 
 .nav-menu>ul>li {
     padding: 5px 10px;
+    border: none;
 }
 
 .nav-menu>ul>li>a {
@@ -83,13 +84,14 @@ header {
     color: #e7e7e7;
 }
 
-.nav-menu>ul>li[active="true"] {
+.nav-menu>ul>li[inView="true"] {
     border: 2px solid #c4a885;
     border-radius: 7px;
+    margin: -2px;
 }
 
 .welcome {
-    padding-top: 240px;
+    padding-top: 280px;
 }
 
 .welcome:first-child div {
@@ -99,7 +101,13 @@ header {
 .welcome h1 {
     font-size: 45px;
     font-weight: 400;
+    color: #c4a885;
     position: relative;
+}
+
+h2 {
+    font-size: 40px;
+    font-weight: 400;
 }
 
 .welcome p {
@@ -116,6 +124,17 @@ header {
     bottom: -25px;
 }
 
+section {
+    margin-bottom: 430px !important;
+}
+
 #home {
-    margin-bottom: 430px;
+    margin-top: 1000px;
+    opacity: 0;
+    transition: margin-top 1s ease, opacity 2s ease;
+}
+
+div.about-me h2 {
+    text-align: center;
+    color: #c4a885
 }

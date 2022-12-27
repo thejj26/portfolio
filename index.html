@@ -17,17 +17,17 @@
     <title>Website Title</title>
 </head>
 
-<body>
+<body">
     <!--header/navigation-->
     <header class="container maxw">
         <div class="navbar">
             <h1>Logo</h1>
             <nav class="nav-menu">
                 <ul>
-                    <li active="true"><a href="#home">Home</a></li>
-                    <li active="false"><a href="#about-me">About Me</a></li>
-                    <li active="false"><a href="#contact">Contact</a></li>
-                    <li active="false"><a href="#other">Other</a></li>
+                    <li inView="true"><a href="#home" class="nav-section" onclick=" enableNavBorder(this)">Home</a></li>
+                    <li inView="false"><a href="#about-me" class="nav-section" onclick=" enableNavBorder(this)">About Me</a></li>
+                    <li inView="false"><a href="#contact" class="nav-section" onclick=" enableNavBorder(this)">Contact</a></li>
+                    <li inView="false"><a href="#other" class="nav-section" onclick=" enableNavBorder(this)">Other</a></li>
                 </ul>
             </nav>
         </div>
@@ -47,7 +47,28 @@
             </div>
         </div>
     </section>
-    <section class="container maxw" id="about-me"></section>
+    <section class="container maxw" id="about-me">
+        <div class="grid about-me">
+            <div class="s12 m12 l12">
+                <h2>About Me</h2>
+            </div>
+        </div>
+    </section>
+    <section class="container maxw" id="contact">
+        <div class="grid about-me">
+            <div class="s12 m12 l12">
+                <h2>Contact</h2>
+            </div>
+        </div>
+    </section>
+    <section class="container maxw" id="other">
+        <div class="grid about-me">
+            <div class="s12 m12 l12">
+                <h2>Other</h2>
+            </div>
+        </div>
+    </section>
+    <script src="assets/js/main.js"></script>
 </body>
 
 </html>
