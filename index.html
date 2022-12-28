@@ -18,6 +18,8 @@
         rel="stylesheet">
     <link rel="stylesheet" <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <title>Website Title</title>
 </head>
 
@@ -41,14 +43,14 @@
                     menu
                 </span>
                 <div class="fullscreen" id="mobile-menu-fullscreen">
-                    <span class="material-symbols-outlined" onclick="hideFullscreen()">
+                    <span class="material-symbols-outlined close" onclick="hideFullscreen()">
                         close
                     </span>
                     <ul>
-                        <li><a href="#home" onclick="hideFullscreen()">Home</a></li>
-                        <li><a href="#about-me" onclick="hideFullscreen()">About Me</a></li>
-                        <li><a href="#contact" onclick="hideFullscreen()">Contact</a></li>
-                        <li><a href="#other" onclick="hideFullscreen()">Other</a></li>
+                        <li><a href="#home" onclick="hideFullscreenMenu()">Home</a></li>
+                        <li><a href="#about-me" onclick="hideFullscreenMenu()">About Me</a></li>
+                        <li><a href="#contact" onclick="hideFullscreenMenu()">Contact</a></li>
+                        <li><a href="#other" onclick="hideFullscreenMenu()">Other</a></li>
                     </ul>
                 </div>
             </div>
@@ -70,9 +72,45 @@
         </div>
     </section>
     <section class="container maxw" id="about-me">
-        <div class="grid about-me">
-            <div class="s12 m12 l12">
-                <h2>About Me</h2>
+        <div class="about-me">
+            <h2>About Me</h2>
+            <div class="content grid">
+                <div class="s12 m4 l3 small"><img src="https://thispersondoesnotexist.com/image" alt=""
+                        onclick="showFullscreenImg(`portrait`)"></div>
+                <div class="s12 m8 l9 large"></div>
+            </div>
+            <div class="fullscreen fs-img grid" id="portrait">
+                <span class="material-symbols-outlined close" onclick="hideFullscreenImg(`portrait`)">
+                    close
+                </span>
+                <div class="s1 m1 l1"></div>
+                <div class="s10 m10 l10 img-container">
+                    <img src="https://thispersondoesnotexist.com/image" alt="" id="portrait-img">
+                    <div class="navigation">
+                        <span class="material-symbols-outlined" onclick="chImg(`portrait-img`,0,null)">
+                            arrow_left
+                        </span>
+                        <span class="material-symbols-rounded fill" id="portrait-img0" onclick="chImg(`portrait-img`,2,0)">
+                            circle
+                        </span>
+                        <span class="material-symbols-rounded" id="portrait-img1" onclick="chImg(`portrait-img`,2,1)">
+                            circle
+                        </span>
+                        <span class="material-symbols-rounded" id="portrait-img2" onclick="chImg(`portrait-img`,2,2)">
+                            circle
+                        </span>
+                        <span class="material-symbols-rounded" id="portrait-img3" onclick="chImg(`portrait-img`,2,3)">
+                            circle
+                        </span>
+                        <span class="material-symbols-rounded" id="portrait-img4"  onclick="chImg(`portrait-img`,2,4)">
+                            circle
+                        </span>
+                        <span class="material-symbols-outlined" onclick="chImg(`portrait-img`,1,null)">
+                            arrow_right
+                        </span>
+                    </div>
+                </div>
+                <div class="s1 m1 l1"></div>
             </div>
         </div>
     </section>
