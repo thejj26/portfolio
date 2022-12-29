@@ -11,6 +11,11 @@ a {
     text-decoration: none;
 }
 
+p{
+    font-size: 20px;
+    line-height: 1.35em;
+}
+
 body {
     background: linear-gradient(135deg, rgba(39, 38, 40, 1) 0%, rgba(78, 42, 88, 1) 100%);
 }
@@ -110,12 +115,6 @@ h2 {
     font-weight: 400;
 }
 
-.welcome p {
-    font-weight: 300;
-    font-size: 20px;
-    line-height: 1.35em;
-}
-
 .welcome h1 img {
     width: 235px;
     height: auto;
@@ -125,7 +124,7 @@ h2 {
 }
 
 section {
-    margin-bottom: 430px !important;
+    margin-bottom: 300px !important;
 }
 
 #home {
@@ -199,19 +198,21 @@ footer {
     font-size: 20px;
 }
 
-img {
-    width: 100%;
-    height: auto;
+.content:first-of-type {
+    margin-top: 50px;
 }
 
-.content {
-    margin-top: 50px;
+.content>div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .fs-img {
     display: none;
     background-color: #181818e7;
     height: 100%;
+    user-select: none;
 }
 
 .no-scroll {
@@ -245,14 +246,19 @@ img {
 .navigation span {
     color: #e7e7e7;
     font-size: 50px;
-    user-select: none;
 }
 
 .navigation span:hover{
     cursor: pointer;
 }
 
-img[onclick] {
+.content img {
+    max-width: 80%;
+    height: auto;
+    justify-self: flex-start;
+}
+
+img[onclick]{
     cursor: pointer;
 }
 
@@ -263,4 +269,17 @@ img[onclick] {
 .fill {
     font-variation-settings:
         'FILL' 1
+}
+
+.content p a, .content p a sup{
+    color: #c4a885;
+}
+
+.content:not(:first-of-type){
+    margin-top: 250px;
+}
+
+#about-me{
+    opacity: 0;
+    transition: opacity 2s ease;
 }

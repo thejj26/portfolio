@@ -75,43 +75,93 @@
         <div class="about-me">
             <h2>About Me</h2>
             <div class="content grid">
-                <div class="s12 m4 l3 small"><img src="https://thispersondoesnotexist.com/image" alt=""
+                <div class="s12 m4 l3"><img src="https://thispersondoesnotexist.com/image" alt="Portrait photos"
                         onclick="showFullscreenImg(`portrait`)"></div>
-                <div class="s12 m8 l9 large"></div>
-            </div>
-            <div class="fullscreen fs-img grid" id="portrait">
-                <span class="material-symbols-outlined close" onclick="hideFullscreenImg(`portrait`)">
-                    close
-                </span>
-                <div class="s1 m1 l1"></div>
-                <div class="s10 m10 l10 img-container">
-                    <img src="https://thispersondoesnotexist.com/image" alt="" id="portrait-img">
-                    <div class="navigation">
-                        <span class="material-symbols-outlined" onclick="chImg(`portrait-img`,0,null)">
-                            arrow_left
-                        </span>
-                        <span class="material-symbols-rounded fill" id="portrait-img0" onclick="chImg(`portrait-img`,2,0)">
-                            circle
-                        </span>
-                        <span class="material-symbols-rounded" id="portrait-img1" onclick="chImg(`portrait-img`,2,1)">
-                            circle
-                        </span>
-                        <span class="material-symbols-rounded" id="portrait-img2" onclick="chImg(`portrait-img`,2,2)">
-                            circle
-                        </span>
-                        <span class="material-symbols-rounded" id="portrait-img3" onclick="chImg(`portrait-img`,2,3)">
-                            circle
-                        </span>
-                        <span class="material-symbols-rounded" id="portrait-img4"  onclick="chImg(`portrait-img`,2,4)">
-                            circle
-                        </span>
-                        <span class="material-symbols-outlined" onclick="chImg(`portrait-img`,1,null)">
-                            arrow_right
-                        </span>
-                    </div>
+                <div class="s12 m8 l9">
+                    <p>I'm Jakov Jozić, a 3<sup>rd</sup> grade student at the <a href="http://ss-elektrotehnicka-st.skole.hr/" target="_blank">School of Electrical Engineering</a> in Split,
+                        Croatia. I've had a passion towards programming since I was young. It started as some QBasic and
+                        Pyhton programming which was a part of my elementary school curriculum. I took some courses but
+                        later
+                        gave up on programming.<br><br>My love towards programming was reawakened when i took
+                        part in the <a href="https://edit.dalmacija.hr/" target="_blank">EDIT Code School</a> course in
+                        2020. It was what got me into web development. My project won<a
+                            href="https://edit.trema.hr/projekti/2022/napredni/pazar/html/"
+                            target="_blank">2<sup>nd</sup> place</a> that year but that wasn't enough so I went further.
+                        Next year I
+                        took on the advanced course and my project won <a
+                            href="http://edit.trema.hr/projekti/2021/srednjiJS/Sklapanje%20ra%C4%8Dunala/"
+                            target="_blank">1<sup>st</sup> place</a>. After that I knew for sure
+                        that web development was the way for me.</p>
                 </div>
-                <div class="s1 m1 l1"></div>
             </div>
+            <div class="content grid">
+                <div class="s12 m8 l9"></div>
+                <div class="s12 m4 l3">
+                    <img src="https://thisartworkdoesnotexist.com/" alt="Hobby photos"
+                        onclick="showFullscreenImg(`hobbies`)">
+                </div>
+            </div>
+        </div>
+        <div class="fullscreen fs-img grid" id="portrait">
+            <span class="material-symbols-outlined close" onclick="hideFullscreenImg(`portrait`)">
+                close
+            </span>
+            <div class="s1 m1 l1"></div>
+            <div class="s10 m10 l10 img-container">
+                <img src="https://thispersondoesnotexist.com/image" alt="" id="portrait-img">
+                <div class="navigation">
+                    <span class="material-symbols-outlined" onclick="chImg(`portrait-img`,0,null)">
+                        arrow_left
+                    </span>
+                    <span class="material-symbols-rounded fill" id="portrait-img0" onclick="chImg(`portrait-img`,2,0)">
+                        circle
+                    </span>
+                    <span class="material-symbols-rounded" id="portrait-img1" onclick="chImg(`portrait-img`,2,1)">
+                        circle
+                    </span>
+                    <span class="material-symbols-rounded" id="portrait-img2" onclick="chImg(`portrait-img`,2,2)">
+                        circle
+                    </span>
+                    <span class="material-symbols-rounded" id="portrait-img3" onclick="chImg(`portrait-img`,2,3)">
+                        circle
+                    </span>
+                    <span class="material-symbols-rounded" id="portrait-img4" onclick="chImg(`portrait-img`,2,4)">
+                        circle
+                    </span>
+                    <span class="material-symbols-outlined" onclick="chImg(`portrait-img`,1,null)">
+                        arrow_right
+                    </span>
+                </div>
+            </div>
+            <div class="s1 m1 l1"></div>
+        </div>
+        <div class="fullscreen fs-img grid" id="hobbies">
+            <span class="material-symbols-outlined close" onclick="hideFullscreenImg(`hobbies`)">
+                close
+            </span>
+            <div class="s1 m1 l1"></div>
+            <div class="s10 m10 l10 img-container">
+                <img src="https://thisartworkdoesnotexist.com/" alt="" id="hobbies-img">
+                <div class="navigation">
+                    <span class="material-symbols-outlined" onclick="chImg(`hobbies-img`,0,null)">
+                        arrow_left
+                    </span>
+                    <span class="material-symbols-rounded fill" id="hobbies-img0" onclick="chImg(`hobbies-img`,2,0)">
+                        circle
+                    </span>
+                    <span class="material-symbols-rounded" id="hobbies-img1" onclick="chImg(`hobbies-img`,2,1)">
+                        circle
+                    </span>
+                    <span class="material-symbols-rounded" id="hobbies-img2" onclick="chImg(`hobbies-img`,2,2)">
+                        circle
+                    </span>
+                    <span class="material-symbols-outlined" onclick="chImg(`hobbies-img`,1,null)">
+                        arrow_right
+                    </span>
+                </div>
+            </div>
+            <div class="s1 m1 l1"></div>
+        </div>
         </div>
     </section>
     <section class="container maxw" id="contact">
