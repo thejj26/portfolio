@@ -23,7 +23,19 @@
     <title>Website Title</title>
 </head>
 
-<body">
+<body>
+    <!--mobile menu-->
+    <div class="fullscreen mobile-nav-menu" id="mobile-menu-fullscreen">
+        <span class="material-symbols-outlined close" onclick="hideFullscreenMenu()">
+            close
+        </span>
+        <ul>
+            <li><a href="#home" onclick="hideFullscreenMenu()">Home</a></li>
+            <li><a href="#about-me" onclick="hideFullscreenMenu()">About Me</a></li>
+            <li><a href="#contact" onclick="hideFullscreenMenu()">Contact</a></li>
+            <li><a href="#other" onclick="hideFullscreenMenu()">Other</a></li>
+        </ul>
+    </div>
     <!--header/navigation-->
     <header class="container">
         <div class="navbar">
@@ -42,17 +54,6 @@
                 <span class="material-symbols-outlined" onclick="showFullscreenMenu()">
                     menu
                 </span>
-                <div class="fullscreen" id="mobile-menu-fullscreen">
-                    <span class="material-symbols-outlined close" onclick="hideFullscreenMenu()">
-                        close
-                    </span>
-                    <ul>
-                        <li><a href="#home" onclick="hideFullscreenMenu()">Home</a></li>
-                        <li><a href="#about-me" onclick="hideFullscreenMenu()">About Me</a></li>
-                        <li><a href="#contact" onclick="hideFullscreenMenu()">Contact</a></li>
-                        <li><a href="#other" onclick="hideFullscreenMenu()">Other</a></li>
-                    </ul>
-                </div>
             </div>
         </div>
     </header>
@@ -60,7 +61,7 @@
     <section class="container maxw" id="home">
         <div class="grid welcome">
             <div class="s12 m12 l4">
-                <h1 id="e">Welcome to my site! <img src="assets/img/title_underline.svg" alt="underline"></h1>
+                <h1 id="e">Welcome to my site!</h1>
             </div>
             <div class="s12 m12 l8">
                 <p>Hello and welcome to my website! I created this website as a kind of portfolio. <br>It is my first
@@ -75,10 +76,15 @@
         <div class="about-me">
             <h2>About Me</h2>
             <div class="content grid">
-                <div class="s12 m4 l3"><img src="https://thispersondoesnotexist.com/image" alt="Portrait photos"
-                        onclick="showFullscreenImg(`portrait`)"></div>
+                <div class="s12 m4 l3">
+                    <img src="https://thispersondoesnotexist.com/image" alt="Portrait photos"
+                        onclick="showFullscreenImg(`portrait`)">
+                    <span class="img-underline"></span>
+                </div>
                 <div class="s12 m8 l9">
-                    <p>I'm Jakov Jozić, a 3<sup>rd</sup> grade student at the <a href="http://ss-elektrotehnicka-st.skole.hr/" target="_blank">School of Electrical Engineering</a> in Split,
+                    <p>I'm Jakov Jozić, a 3<sup>rd</sup> grade student at the <a
+                            href="http://ss-elektrotehnicka-st.skole.hr/" target="_blank">School of Electrical
+                            Engineering</a> in Split,
                         Croatia. I've had a passion towards programming since I was young. It started as some QBasic and
                         Pyhton programming which was a part of my elementary school curriculum. I took some courses but
                         later
@@ -99,6 +105,7 @@
                 <div class="s12 m4 l3">
                     <img src="https://thisartworkdoesnotexist.com/" alt="Hobby photos"
                         onclick="showFullscreenImg(`hobbies`)">
+                    <span class="img-underline"></span>
                 </div>
             </div>
         </div>
@@ -182,6 +189,6 @@
         <p>©&nbsp;&nbsp;Jakov Jozić 2022</p>
     </footer>
     <script src="assets/js/main.js"></script>
-    </body>
+</body>
 
 </html>

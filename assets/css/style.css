@@ -18,6 +18,7 @@ p {
 
 body {
     background: linear-gradient(135deg, rgba(39, 38, 40, 1) 0%, rgba(78, 42, 88, 1) 100%);
+    overflow: overlay;
 }
 
 .container,
@@ -39,6 +40,10 @@ body {
 
     .mobile-nav-menu {
         display: flex !important;
+    }
+
+    .img-underline{
+        display: none;
     }
 
 }
@@ -73,6 +78,7 @@ header {
     max-width: 100%;
     width: 100%;
     box-sizing: border-box;
+    backdrop-filter: blur(4.3px);
 }
 
 .navbar {
@@ -113,29 +119,21 @@ a.nav-section:hover {
 }
 
 .welcome:first-child div {
-    margin-bottom: 65px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .welcome h1 {
     font-size: 45px;
     font-weight: 400;
     color: #d1b492;
-    position: relative;
 }
 
 h2 {
     font-size: 40px;
     font-weight: 400;
 }
-
-.welcome h1 img {
-    width: 235px;
-    height: auto;
-    position: absolute;
-    left: 5px;
-    bottom: -25px;
-}
-
 section {
     margin-bottom: 300px !important;
 }
@@ -163,9 +161,8 @@ div.about-me h2 {
 
 .fullscreen {
     position: fixed;
-    top: 50%;
-    right: 50%;
-    transform: translate(50%, -50%);
+    top: 0;
+    right: 0;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -174,6 +171,7 @@ div.about-me h2 {
     height: 0;
     opacity: 0;
     transition: opacity 0.15s linear;
+    /*backdrop-filter: blur(2.5px);*/
 }
 
 .mobile-nav-menu ul {
@@ -221,6 +219,8 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
+    gap:12px;
 }
 
 .fs-img {
@@ -268,9 +268,8 @@ footer {
 }
 
 .content img {
-    max-width: 80%;
+    width: 80%;
     height: auto;
-    justify-self: flex-start;
 }
 
 img[onclick] {
@@ -305,4 +304,39 @@ img[onclick] {
 #about-me {
     opacity: 0;
     transition: opacity 2s ease;
+}
+
+/*custom crollbar*/
+::-webkit-scrollbar {
+    position: absolute;
+    right: 0;
+    top: 0;
+    max-width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+
+}
+
+::-webkit-scrollbar-track:hover {
+    background-color: #242424a2;
+
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #d1b492b6;
+    border-radius: 10px;
+}
+
+/*image underline*/
+.img-underline{
+    width: 15%;
+    height: 2px;
+    background-color: #d1b492;
+    transition: 0.25s ease;
+}
+
+img[onclick]:hover+.img-underline{
+    width: 70%;
 }

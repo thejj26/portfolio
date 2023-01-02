@@ -23,36 +23,36 @@ function enableScrollInFullscreen() {
 }
 
 function showFullscreenMenu() {
-   fullscreenMenu.style.width="100%"
-   fullscreenMenu.style.height="100%"
-   fullscreenMenu.style.opacity="1"
-   fullscreenMenu.style.transition="opacity 0.15s linear"
+   fullscreenMenu.style.width = "100%"
+   fullscreenMenu.style.height = "100%"
+   fullscreenMenu.style.opacity = "1"
+   fullscreenMenu.style.transition = "opacity 0.15s linear"
    disableScrollInFulscreen()
 }
 
 function hideFullscreenMenu() {
-   fullscreenMenu.style.width="0"
-   fullscreenMenu.style.height="0"
-   fullscreenMenu.style.opacity="0"
-   fullscreenMenu.style.transition="none"
+   fullscreenMenu.style.width = "0"
+   fullscreenMenu.style.height = "0"
+   fullscreenMenu.style.opacity = "0"
+   fullscreenMenu.style.transition = "none"
    enableScrollInFullscreen()
 }
 
 function showFullscreenImg(divId) {
    disableScrollInFulscreen()
-   let div=document.getElementById(divId)
-   div.style.width="100%"
-   div.style.height="100%"
-   div.style.opacity="1"
-   div.style.transition="opacity 0.15s linear"
+   let div = document.getElementById(divId)
+   div.style.width = "100%"
+   div.style.height = "100%"
+   div.style.opacity = "1"
+   div.style.transition = "opacity 0.15s linear"
 }
 
 function hideFullscreenImg(divId) {
-   let div=document.getElementById(divId)
-   div.style.width="0"
-   div.style.height="0"
-   div.style.opacity="0"
-   div.style.transition="none"
+   let div = document.getElementById(divId)
+   div.style.width = "0"
+   div.style.height = "0"
+   div.style.opacity = "0"
+   div.style.transition = "none"
    enableScrollInFullscreen()
 }
 
