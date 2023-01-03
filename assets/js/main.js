@@ -7,13 +7,6 @@ let activePortrait = 0
 let hobbyImages = ["https://thisartworkdoesnotexist.com/", "https://thisartworkdoesnotexist.com/", "https://thisartworkdoesnotexist.com/"]
 let activeHobby = 0
 
-document.addEventListener("DOMContentLoaded", () => { //when the site loads execute the event
-   document.getElementById("home").style.marginTop = "0";    //remove the margin
-   document.getElementById("home").style.opacity = "1"; //set the opacity to 1 (fully visible)
-   document.getElementById("about-me").style.opacity = "1";
-})
-
-
 function disableScrollInFulscreen() {
    body.classList.add("no-scroll")
 }
@@ -23,37 +16,42 @@ function enableScrollInFullscreen() {
 }
 
 function showFullscreenMenu() {
-   fullscreenMenu.style.width = "100%"
-   fullscreenMenu.style.height = "100%"
-   fullscreenMenu.style.opacity = "1"
-   fullscreenMenu.style.transition = "opacity 0.15s linear"
    disableScrollInFulscreen()
+   fullscreenMenu.style.display = "flex"
+   fullscreenMenu.style.zIndex="2"
+   setTimeout(() => {
+      fullscreenMenu.style.opacity = "1"
+   }, 50);
 }
 
 function hideFullscreenMenu() {
-   fullscreenMenu.style.width = "0"
-   fullscreenMenu.style.height = "0"
    fullscreenMenu.style.opacity = "0"
-   fullscreenMenu.style.transition = "none"
-   enableScrollInFullscreen()
+   setTimeout(() => {
+      fullscreenMenu.style.display = "none"
+      fullscreenMenu.style.zIndex="-1"
+      enableScrollInFullscreen()
+   }, 200);
+
 }
 
 function showFullscreenImg(divId) {
    disableScrollInFulscreen()
    let div = document.getElementById(divId)
-   div.style.width = "100%"
-   div.style.height = "100%"
-   div.style.opacity = "1"
-   div.style.transition = "opacity 0.15s linear"
+   div.style.zIndex="2"
+   div.style.display = "flex"
+   setTimeout(() => {
+      div.style.opacity = "1"
+   }, 50);
 }
 
 function hideFullscreenImg(divId) {
    let div = document.getElementById(divId)
-   div.style.width = "0"
-   div.style.height = "0"
    div.style.opacity = "0"
-   div.style.transition = "none"
-   enableScrollInFullscreen()
+   setTimeout(() => {
+      div.style.display = "none"
+      div.style.zIndex="-1"
+      enableScrollInFullscreen()
+   }, 200);
 }
 
 function chImg(imgId, mode, index) {
