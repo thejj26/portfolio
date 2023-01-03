@@ -4,6 +4,7 @@
     font-family: 'Nunito Sans', sans-serif;
     color: #e7e7e7;
     list-style: none;
+    scroll-behavior: smooth;
 }
 
 a {
@@ -41,8 +42,8 @@ body {
         display: flex !important;
     }
 
-    .img-underline{
-        display: none;
+    img[onclick]:hover+.img-underline{
+        width: 15% !important;
     }
 
 }
@@ -61,6 +62,10 @@ body {
     .container {
         padding: 0 120px;
     }
+    .welcome div.l4{
+        border-right: #e7e7e7 2px solid;
+        text-align: center;
+    }
 }
 
 /*max width of the site*/
@@ -78,6 +83,13 @@ header {
     width: 100%;
     box-sizing: border-box;
     backdrop-filter: blur(4.3px);
+}
+
+img[logo]{
+    width: auto;
+    height:68px;
+    margin: -20px 0;
+    padding: 10px 0;
 }
 
 .navbar {
@@ -326,4 +338,8 @@ img[onclick] {
 
 img[onclick]:hover+.img-underline{
     width: 70%;
+}
+
+.content p{
+    text-align:justify;
 }
